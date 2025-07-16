@@ -3,7 +3,7 @@ def binarySearch(list, item):
     high = len(list) - 1
     
     while low <= high:
-        mid = (low + high)
+        mid = (low + high) // 2
         guess = list[mid]
 
         if guess == item:
@@ -15,8 +15,10 @@ def binarySearch(list, item):
             
     return None
 
-testList = [1, 5, 7, 9, 11, 21] # for sorted array only!
-result = binarySearch(testList, 5)
+testList = [1, 5, 7, 9, 11, 21, 77, 81, 101, 121, 125] # for sorted array only!
+print("last index", len(testList) - 1)
+
+result = binarySearch(testList, 101)
 
 if result != None:
     print("Element found by index ->", result)
